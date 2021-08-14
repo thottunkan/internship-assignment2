@@ -144,7 +144,7 @@ router.get("/admin",(req,res,next)=>{
     res.render("../views/admin.hbs",{admin:true,title:"admin panel"})
  })
 
-router.get("admin/addproduct",(req,res,next)=>{
+router.get("/admin/addproduct",(req,res,next)=>{
   
     res.render("../views/admin-addproduct.hbs",{title:"add product",admin:true})
     console.log("hai")
