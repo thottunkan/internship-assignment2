@@ -179,7 +179,7 @@ router.get("/admin/allorders",(req,res,next)=>{
    productHelper.getAllOrders().then(function(orders){
      productHelper.getAllDeliveryGuy().then((deliveryguys)=>{
        console.log(deliveryguys)
-      res.render("../views/orders.hbs",{admin:false,title:"orders",orders:orders,deliveryguys:deliveryguys})
+      res.render("../views/orders.hbs",{admin:false,title:"orders",orders:orders,delivery:deliveryguys})
      })
      
    })

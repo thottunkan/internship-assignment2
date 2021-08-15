@@ -45,7 +45,7 @@
         <tr>
             <td>
                 <div class="bg-image hover-overlay ripple">
-                    <img src="../product-images/{{this.cartdetails.[0].productdetails.[0]._id}}.jpg" class="img-fluid" width="50" height="50 " />
+                    <img src="/product-images/{{this.cartdetails.[0].productdetails.[0]._id}}.jpg" class="img-fluid" width="50" height="50 " />
                     <a href="#!">
                         <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
                     </a>
@@ -78,8 +78,8 @@
             <td>
                     <select name="" id="">
                         <option value="">-choose-</option>
-                        {{#each deliveryguys}}
-                            <option value="">{{this.name}}</option>
+                         {{#each delivery}}
+                            <h3>{{this.name}}</h3>
                         {{/each}}
                     </select>
             </td>
@@ -92,6 +92,7 @@
         </tr>
       {{/each}}
   </table>
+ 
 
 
  </div>
