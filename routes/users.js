@@ -175,6 +175,14 @@ router.post("/admin/addproduct",(req,res,next)=>{
   console.log("post add prod")
 })
 
+router.get("/admin/products",(req,res)=>{
+   productHelper.getAllProducts().then((products)=>{
+     console.log(products)
+     res.render("../views/allproducts-admin.hbs",{products:products})
+   })
+   
+})
+
 router.get("/admin/allorders",(req,res,next)=>{
    productHelper.getAllOrders().then(function(orders){
      productHelper.getAllDeliveryGuy().then((deliveryguys)=>{

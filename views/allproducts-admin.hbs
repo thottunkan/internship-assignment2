@@ -1,0 +1,32 @@
+<div class="container-fluid" style="margin-top: 100px;">
+    <table class="table table-striped">
+        <th>
+            <td>
+                Product Name
+            </td>
+            <td>
+                Produc Price
+            </td>
+            <td>
+                Description
+            </td>
+            <td>
+                Address
+            </td>
+            <td>Location</td>
+        </th>
+        {{#each products}}
+            <tr>
+                <td></td>
+                <td>{{this.productname}}</td>
+                <td>{{this.productprice}}</td>
+                <td>{{this.productdesc}}</td>
+                <td>{{this.address}}</td>
+                <td>{{this.location}}</td>
+                <td><a href="" class="btn btn-secondary">Edit</a></td>
+                <td><a href="" class="btn btn-danger">Delete</a></td>
+            </tr>
+           
+        {{/each}}
+    </table>
+</div>
