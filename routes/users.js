@@ -183,6 +183,13 @@ router.get("/admin/products",(req,res)=>{
    
 })
 
+router.get("/admin/allusers",(req,res)=>{
+   productHelper.getAllUsers().then((users)=>{
+     res.render("../views/allusers-admin.hbs",{users:users});
+     
+   })
+})
+
 router.get("/admin/allorders",(req,res,next)=>{
    productHelper.getAllOrders().then(function(orders){
      productHelper.getAllDeliveryGuy().then((deliveryguys)=>{

@@ -1,0 +1,46 @@
+<div class="container-fluid" style="margin-top: 20px;">
+    <h2>All Users</h2>
+    <br>
+    <table class="table table-striped">
+        <th>
+            <td>
+                Name
+            </td>
+            <td>
+                Email
+            </td>
+            <td>
+                Phone
+            </td>
+            <td>
+                Address
+            </td>
+            <td>
+                Location
+            </td>
+            <td>
+                Username
+            </td>
+            <td>
+                Password
+            </td>
+            <td>
+                UserType
+            </td>
+        </th>
+        {{#each users}}
+            <tr>
+                <td></td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.phone}}</td>
+                <td>{{this.address}}</td>
+                <td>{{this.location}}</td>
+                <td>{{this.username}}</td>
+                  <td>{{this.password}}</td>
+                <td>{{this.usertype}}</td>
+            </tr>
+           
+        {{/each}}
+    </table>
+</div>
