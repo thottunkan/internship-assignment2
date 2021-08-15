@@ -146,8 +146,8 @@ router.get("/admin",(req,res,next)=>{
 
 router.get("/admin/addproduct",(req,res,next)=>{
   
-    res.render("../views/admin-addproduct.hbs",{title:"add product",admin:true})
-    console.log("hai")
+    res.render("../views/admin-addproduct.hbs",{title:"add product",admin:false})
+    
 })
 
 router.post("/admin/addproduct",(req,res,next)=>{
@@ -164,7 +164,7 @@ router.post("/admin/addproduct",(req,res,next)=>{
   productHelper.addProduct(prodobj,(productid)=>{
     image.mv("./public/product-images/"+productid+".jpg",(err,done)=>{
       if (!err) {
-        res.render("../views/admin-addproduct.hbs",{title:"add product",admin:true})
+        res.render("../views/admin-addproduct.hbs",{title:"add product",admin:false})
         console.log("product added")
       } else {
         console.log(err)
@@ -179,7 +179,7 @@ router.get("/admin/allorders",(req,res,next)=>{
    productHelper.getAllOrders().then(function(orders){
      productHelper.getAllDeliveryGuy().then((deliveryguys)=>{
        console.log(deliveryguys)
-      res.render("../views/orders.hbs",{admin:true,title:"orders",orders:orders,deliveryguys:deliveryguys})
+      res.render("../views/orders.hbs",{admin:false,title:"orders",orders:orders,deliveryguys:deliveryguys})
      })
      
    })
